@@ -7,15 +7,31 @@ tencent bugly
 ```sh
 npm install @react-native-retu/bugly
 ```
+### 参数配置
+- 在AndroidManifest.xml中添加权限：
+```xml
+<uses-permission android:name="android.permission.INTERNET" />
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+```
+- 请避免混淆Bugly，在Proguard混淆文件中增加以下配置：
+```
+-dontwarn com.tencent.bugly.**
+-keep public class com.tencent.bugly.**{*;}
+```
+
+### Android
+
+### iOS
 
 ## Usage
 
 ```js
-import { multiply } from "@react-native-retu/bugly";
+import Bugly from "@react-native-retu/bugly";
 
 // ...
 
-const result = await multiply(3, 7);
+const result = await Bugly.multiply(3, 7);
 ```
 
 ## Contributing

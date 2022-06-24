@@ -12,6 +12,7 @@ import java.util.Collections;
 import java.util.List;
 
 public class BuglyPackage implements ReactPackage {
+
     @NonNull
     @Override
     public List<NativeModule> createNativeModules(@NonNull ReactApplicationContext reactContext) {
