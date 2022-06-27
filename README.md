@@ -1,13 +1,16 @@
 # @react-native-retu/bugly
+[![NPM Version](https://img.shields.io/npm/v/@react-native-retu/bugly.svg)](https://npmjs.org/package/react-native-alipay-verify)
+[![License](https://img.shields.io/npm/l/@react-native-retu/bugly.svg)](./LICENSE)
 
-tencent bugly
+基于腾讯[bugly SDK](https://bugly.qq.com/) v4.0.4 实现，应用崩溃日志收集，让**BUG**🐛有迹可循
 
 ## Installation
 
 ```sh
-npm install @react-native-retu/bugly
+yarn add @react-native-retu/bugly
 ```
 ### 参数配置
+#### Android
 - 在AndroidManifest.xml中添加权限：
 ```xml
 <uses-permission android:name="android.permission.INTERNET" />
@@ -19,10 +22,8 @@ npm install @react-native-retu/bugly
 -dontwarn com.tencent.bugly.**
 -keep public class com.tencent.bugly.**{*;}
 ```
+#### iOS
 
-### Android
-
-### iOS
 
 ## Usage
 
@@ -35,6 +36,8 @@ const result = await Bugly.multiply(3, 7);
 ```
 
 ## Contributing
+
+- [@DengXiangHong](https://github.com/DengXiangHong)
 
 See the [contributing guide](CONTRIBUTING.md) to learn how to contribute to the repository and the development workflow.
 
