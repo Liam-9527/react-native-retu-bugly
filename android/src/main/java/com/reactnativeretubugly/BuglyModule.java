@@ -15,6 +15,7 @@ import com.tencent.bugly.crashreport.CrashReport;
 
 import java.util.HashMap;
 import java.util.Map;
+import android.util.Log;
 
 @ReactModule(name = BuglyModule.NAME)
 public class BuglyModule extends ReactContextBaseJavaModule {
@@ -225,18 +226,23 @@ public class BuglyModule extends ReactContextBaseJavaModule {
 		switch (level) {
 			case "v":
 				BuglyLog.v(tag, log);
+				Log.v(tag, log);
 				break;
 			case "d":
 				BuglyLog.d(tag, log);
+				Log.d(tag, log);
 				break;
 			case "i":
 				BuglyLog.i(tag, log);
+				Log.i(tag, log);
 				break;
 			case "w":
 				BuglyLog.w(tag, log);
+				Log.w(tag, log);
 				break;
 			case "e":
 				BuglyLog.e(tag, log);
+				Log.e(tag, log);
 				break;
 		}
 	}
@@ -268,7 +274,7 @@ public class BuglyModule extends ReactContextBaseJavaModule {
 			CrashReport.postException(category, errorType, errorMsg, stack, extra);
 			promise.resolve(true);
 		} catch (Exception e) {
-			promise.resolve(e.getMessage());
+			promise.reject("-1", e.getMessage());
 		}
 	}
 }

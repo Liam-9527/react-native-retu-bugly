@@ -10,7 +10,7 @@
     "lint": "eslint ."
   },
   "dependencies": {
-    "@react-native-retu/bugly": "file:../../../@react-native-retu/bugly",
+    "@react-native-retu/bugly": "file:./node_modules/@react-native-retu/bugly",
     "react": "16.13.1",
     "react-native": "0.63.0",
     "react-native-device-info": "^9.0.2",
