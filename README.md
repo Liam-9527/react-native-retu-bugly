@@ -73,10 +73,9 @@ ios
 pod install
 yarn ios
 ```
+![](https://s1.ax1x.com/2022/06/28/jem9xg.png)
 
-![](https://github.com/DengXiangHong/react-native-retu-bugly/tree/main/example/images/2.png)
-
-![](https://github.com/DengXiangHong/react-native-retu-bugly/tree/main/example/images/1.png)
+![](https://s1.ax1x.com/2022/06/28/jemPMQ.png)
 
 ## API
 
