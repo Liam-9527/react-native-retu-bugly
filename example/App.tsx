@@ -153,6 +153,11 @@ export default class App extends Component<any, State> {
 					<Text style={styles.title}>
 						Bugly
 					</Text>
+					{__DEV__ ?
+						<Text style={[styles.text, {color: "red"}]}>
+							Debug模式下崩溃日志不会上报！！！
+						</Text>
+					: null}
 					<Text style={styles.text}>
 						Click on the following button to render a component that will throw an error.
 					</Text>
@@ -162,7 +167,7 @@ export default class App extends Component<any, State> {
 								style={styles.button}
 								onPress={() => Alert.alert('DeviceInfo', JSON.stringify(this.state.strategy))}
 							>
-								<Text style={styles.buttonText}>deviceInfo</Text>
+								<Text style={styles.buttonText}>🚑deviceInfo</Text>
 							</TouchableOpacity>
 							<TouchableOpacity
 								style={styles.button}
@@ -171,25 +176,25 @@ export default class App extends Component<any, State> {
 									Bugly.testCrash();
 								}}
 							>
-								<Text style={styles.buttonText}>testCrash</Text>
+								<Text style={styles.buttonText}>🎨testCrash</Text>
 							</TouchableOpacity>
 							<TouchableOpacity
 								style={styles.button}
 								onPress={() => App.testJavaScriptCrash()}
 							>
-								<Text style={styles.buttonText}>testJavaScriptCrash</Text>
+								<Text style={styles.buttonText}>🔨testJavaScriptCrash</Text>
 							</TouchableOpacity>
 							<TouchableOpacity
 								style={styles.button}
 								onPress={() => this.testComponentWithError()}
 							>
-								<Text style={styles.buttonText}>testComponentWithError</Text>
+								<Text style={styles.buttonText}>🛠testComponentWithError</Text>
 							</TouchableOpacity>
 							<TouchableOpacity
 								style={styles.button}
 								onPress={() => this.postException()}
 							>
-								<Text style={styles.buttonText}>postException</Text>
+								<Text style={styles.buttonText}>🚀postException</Text>
 							</TouchableOpacity>
 						</View>
 						{this.state.isShowErrorComponent ? <ComponentWithError /> : null}
@@ -272,7 +277,7 @@ const styles = StyleSheet.create({
 		fontSize: 48,
 	},
 	text: {
-		marginVertical: 16,
+		marginVertical: 5,
 		marginHorizontal: 10,
 	},
 });

@@ -7,6 +7,8 @@
 
 > 基于腾讯[bugly SDK](https://bugly.qq.com/) v4.0.4 实现，应用崩溃日志收集，让**BUG**🐛有迹可循。
 
+🔨Debug环境下崩溃日志不会上报，请安装release版本测试！！！⚡
+
 ## Installation
 Using npm:
 
