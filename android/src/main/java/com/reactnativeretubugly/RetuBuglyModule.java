@@ -17,12 +17,12 @@ import java.util.HashMap;
 import java.util.Map;
 import android.util.Log;
 
-@ReactModule(name = BuglyModule.NAME)
+@ReactModule(name = RetuBuglyModule.NAME)
 public class RetuBuglyModule extends ReactContextBaseJavaModule {
 
 	private ReactApplicationContext reactContext;
 
-	public static final String NAME = "Bugly";
+	public static final String NAME = "RetuBugly";
 
 	public RetuBuglyModule(ReactApplicationContext reactContext) {
 		super(reactContext);

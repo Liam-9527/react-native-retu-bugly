@@ -1,11 +1,11 @@
 # @react-native-retu/bugly
-[![npm version](https://badge.fury.io/js/@react-native-retu/bugly.svg)](http://badge.fury.io/js/@react-native-retu/bugly)
+[![NPM Version](https://img.shields.io/npm/v/@react-native-retu/bugly.svg)](https://npmjs.org/package/react-native-alipay-verify)
 [![npm total downloads](https://img.shields.io/npm/dt/@react-native-retu/bugly.svg)](https://img.shields.io/npm/dt/@react-native-retu/bugly.svg)
 [![npm monthly downloads](https://img.shields.io/npm/dm/@react-native-retu/bugly.svg)](https://img.shields.io/npm/dm/@react-native-retu/bugly.svg)
 [![npm weekly downloads](https://img.shields.io/npm/dw/@react-native-retu/bugly.svg)](https://img.shields.io/npm/dw/@react-native-retu/bugly.svg)
 [![License](https://img.shields.io/npm/l/@react-native-retu/bugly.svg)](./LICENSE)
 
-> See 基于腾讯[bugly SDK](https://bugly.qq.com/) v4.0.4 实现，应用崩溃日志收集，让**BUG**🐛有迹可循。
+> 基于腾讯[bugly SDK](https://bugly.qq.com/) v4.0.4 实现，应用崩溃日志收集，让**BUG**🐛有迹可循。
 
 ## Installation
 Using npm:
@@ -73,6 +73,10 @@ ios
 pod install
 yarn ios
 ```
+
+![](https://github.com/DengXiangHong/react-native-retu-bugly/tree/main/example/images/2.png)
+
+![](https://github.com/DengXiangHong/react-native-retu-bugly/tree/main/example/images/1.png)
 
 ## API
 
