@@ -11,7 +11,7 @@
     "build-ios": "react-native bundle --entry-file index.js --bundle-output ./ios/bundle/index.ios.jsbundle --platform ios --assets-dest ./ios/bundle --dev false"
   },
   "dependencies": {
-    "@react-native-retu/bugly": "file:./node_modules/@react-native-retu/bugly",
+    "@react-native-retu/bugly": "^0.1.0",
     "react": "16.13.1",
     "react-native": "0.63.0",
     "react-native-device-info": "^9.0.2",

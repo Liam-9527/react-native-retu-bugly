@@ -1,5 +1,5 @@
 # @react-native-retu/bugly
-[![NPM Version](https://img.shields.io/npm/v/@react-native-retu/bugly.svg)](https://npmjs.org/package/react-native-alipay-verify)
+[![NPM Version](https://img.shields.io/npm/v/@react-native-retu/bugly.svg)](https://npmjs.org/package/@react-native-retu/bugly)
 [![npm total downloads](https://img.shields.io/npm/dt/@react-native-retu/bugly.svg)](https://img.shields.io/npm/dt/@react-native-retu/bugly.svg)
 [![npm monthly downloads](https://img.shields.io/npm/dm/@react-native-retu/bugly.svg)](https://img.shields.io/npm/dm/@react-native-retu/bugly.svg)
 [![npm weekly downloads](https://img.shields.io/npm/dw/@react-native-retu/bugly.svg)](https://img.shields.io/npm/dw/@react-native-retu/bugly.svg)

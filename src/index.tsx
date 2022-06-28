@@ -2,7 +2,7 @@ import {NativeModules, Platform} from 'react-native';
 
 /**
  * BuglyType
- * @author 双料特工穿山甲
+ * @author 双料特工_氚钐钾
  * @Date 2022/6/24
  * @github https://github.com/DengXiangHong/react-native-retu-bugly
  * @document Bugly SDK => https://bugly.qq.com/docs/user-guide/instruction-manual-android/?v=1.0.0
@@ -11,7 +11,6 @@ export type BuglyType = {
 
     /**
      * 崩溃测试
-     * TODO 删除
      */
     testCrash(): void
 

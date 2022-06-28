@@ -1,12 +1,9 @@
 {
   "name": "@react-native-retu/bugly",
   "version": "0.1.0",
-  "description": "@react-native-retu/bugly tencent bugly",
-  "main": "lib\\commonjs\\index.js",
-  "module": "lib\\module\\index.js",
-  "types": "lib\\typescript\\src\\index.d.ts",
-  "react-native": "index.tsx",
-  "source": "index",
+  "description": "tencent bugly",
+  "react-native": "src/index",
+  "source": "src/index",
   "files": [
     "src",
     "lib",
@@ -25,16 +22,17 @@
     "test": "jest",
     "typescript": "tsc --noEmit",
     "lint": "eslint \"**/*.{js,ts,tsx}\"",
-    "prepare": "bob build",
     "release": "release-it",
     "example": "yarn --cwd example",
-    "pods": "cd example && pod-install --quiet",
-    "bootstrap": "yarn example && yarn && yarn pods"
+    "pods": "cd example && pod-install --quiet"
   },
   "keywords": [
     "react-native",
     "ios",
-    "android"
+    "android",
+    "bugly",
+    "bugly-sdk",
+    "react-native-bugly"
   ],
   "repository": "https://github.com/DengXiangHong/react-native-retu-bugly",
   "author": "DengXiangHong <445585388@qq.com> (https://github.com/DengXiangHong)",
