@@ -77,6 +77,8 @@ yarn ios
 
 ![](https://s1.ax1x.com/2022/06/28/jemPMQ.png)
 
+![](https://s1.ax1x.com/2022/06/28/jem5es.png)
+
 ## API
 
 |Method|Return Type|iOS|Android|
