@@ -11,7 +11,14 @@ import {
 	View,
 } from 'react-native';
 import Bugly, { BuglyStrategyConfig, CATEGORY, ExceptionParams, LOG_LEVEL } from '@react-native-retu/bugly';
-import { getBuildNumber, getBundleId, getDeviceNameSync, getUniqueId, getVersion } from 'react-native-device-info';
+import {
+	getReadableVersion,
+	getBundleId,
+	getDeviceNameSync,
+	getSystemName,
+	getUniqueId,
+	getSystemVersion,
+} from 'react-native-device-info';
 import ComponentWithError from './ComponentWithError';
 import ErrorBoundary from 'react-native-error-boundary';
 
@@ -32,16 +39,17 @@ export default class App extends Component<any, State> {
 		this.state = {
 			strategy: {},
 			isShowErrorComponent: false,
+
 		};
 	}
 
 	componentDidMount() {
 		const strategy: BuglyStrategyConfig = {
-			appChannel: 'Google Play',
-			appVersion: getVersion() + '.' + getBuildNumber(),
+			appChannel: Platform.select({ios: "App Store", android: "Google Play"}),
+			appVersion: getReadableVersion(),
 			appPackageName: getBundleId(),
 			deviceId: getUniqueId(),
-			deviceModel: getDeviceNameSync(),
+			deviceModel: getDeviceNameSync()+"_"+getSystemName()+" "+getSystemVersion(),
 			enableCatchAnrTrace: true,
 			enableRecordAnrMainStack: true,
 		};
@@ -87,10 +95,10 @@ export default class App extends Component<any, State> {
 			category: Platform.select({ ios: CATEGORY.IOS_JS, default: CATEGORY.ANDROID_JS }),
 			errorType: 'React Native Exception Test',
 			errorMsg: 'This React Native Exception Test',
-			stack: '111111122222',
+			stack: 'This Test,This Test,This Test!!!',
 		};
 		Bugly.log('崩溃警告', '这是主动上报自定义崩溃', LOG_LEVEL.W);
-		Bugly.postException(exception).catch();
+		Bugly.postException(exception).then(() => Alert.alert("上报成功", JSON.stringify(exception))).catch();
 	}
 
 	/**
@@ -160,10 +168,10 @@ export default class App extends Component<any, State> {
 								style={styles.button}
 								onPress={() => {
 									Bugly.log('崩溃警告', '这是 testJavaCrash 发生的崩溃', LOG_LEVEL.W);
-									Bugly.testJavaCrash();
+									Bugly.testCrash();
 								}}
 							>
-								<Text style={styles.buttonText}>testJavaCrash</Text>
+								<Text style={styles.buttonText}>testCrash</Text>
 							</TouchableOpacity>
 							<TouchableOpacity
 								style={styles.button}
@@ -246,10 +254,10 @@ const styles = StyleSheet.create({
 		color: '#FFFFFF',
 	},
 	container: {
+		paddingTop: 40,
 		flex: 1,
 		justifyContent: 'center',
 		alignItems: 'center',
-		paddingTop: 10,
 		backgroundColor: '#ecf0f1',
 		padding: 8,
 		textAlign: 'center',

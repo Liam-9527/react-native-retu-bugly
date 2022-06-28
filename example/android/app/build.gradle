@@ -132,8 +132,8 @@ android {
         applicationId "com.retu.example"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
-        versionCode 220625
-        versionName "0.1.1"
+        versionCode 220628
+        versionName "1.0.0"
     }
     splits {
         abi {
