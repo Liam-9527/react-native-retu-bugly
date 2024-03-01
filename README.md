@@ -179,12 +179,6 @@ Bugly.log('崩溃警告', '这是主动上报自定义崩溃', LOG_LEVEL.W);
 Bugly.postException(exception).then(() => Alert.alert("上报成功", JSON.stringify(exception))).catch();
 ```
 
-## Contributing
-
-- [@DengXiangHong](https://github.com/DengXiangHong)
-
-See the [contributing guide](CONTRIBUTING.md) to learn how to contribute to the repository and the development workflow.
-
 ## License
 
 MIT
