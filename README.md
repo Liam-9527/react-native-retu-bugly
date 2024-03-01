@@ -63,7 +63,7 @@ Bugly.testCrash();
 ```
 ## Example
 ```shell
-git clone https://github.com/DengXiangHong/react-native-retu-bugly.git
+git clone https://github.com/Alan0725/react-native-retu-bugly.git
 cd example && yarn install
 ```
 android
